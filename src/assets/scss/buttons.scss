@@ -1,0 +1,39 @@
+@import '@/assets/scss/colors.scss';
+
+.btn {
+  border: none;
+  padding: .5rem;
+  cursor: pointer;
+  border-radius: .5rem;
+  transition: all .2s ease;
+  &.default {
+    color: $white-dark;
+    background: $info;
+    &:hover {
+      background: $info-small-dark;  
+    }
+    &:active {
+      background: $info-dark;
+    }
+  }
+  &.cancel {
+    background: $main-light;
+    color: $main-dark;
+    &:hover {
+      background: darken($main-light, 5%);  
+    }
+    &:active {
+      background: darken($main-light, 10%);
+    }
+  }
+  &.danger {
+    background: $danger;
+    color: $white-dark;
+    &:hover {
+      background: darken($danger, 5%);  
+    }
+    &:active {
+      background: darken($danger, 10%);
+    }
+  }
+}

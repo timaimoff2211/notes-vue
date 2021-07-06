@@ -1,0 +1,38 @@
+@import '@/assets/scss/colors.scss';
+
+.modal {
+  transition: all .3s ease;
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  z-index: 10;
+  &.active {
+    visibility: visible;
+    opacity: 1;
+  }
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: $dark-overlay-bg;
+    z-index: -1;
+  }
+
+  &__content {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    width: 1200px;
+    height: 600px;
+    z-index: 11;
+    background: $white-dark;
+    border-radius: 1rem;
+  }
+}
